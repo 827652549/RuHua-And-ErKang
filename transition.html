@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+		
+			cursor: url("img/ek.ico"),help;
+		}
+		span{
+			font-size: 50px;
+			font-weight: bold;
+		}
+		img{
+			
+			position: absolute;
+			width: 100px;
+			height:100px;
+			transition: top 1s linear,left 1s linear;
+		}
+		div{
+
+			
+		}
+		
+	</style>
+	<body>
+		<img id="i" src="img/rh.png"/>
+		<div id="d">	</div>
+	</body>
+	<script type="text/javascript">
+		var i  = document.getElementById("i").style;
+		i.left=0+"px";
+		i.top=0+"px";
+		var kissCount=0;
+		document.onmousemove=function(evt){
+			i.left=evt.pageX-50+"px";
+			i.top=evt.pageY-50+"px";
+		}
+		document.getElementById("i").onmouseover = function(){
+			var t = document.getElementById("d");
+			kissCount+=1;
+			t.innerHTML='如花哥哥亲了尔康<span>'+kissCount+'</span>次';
+
+		}
+		
+	</script>
+</html>
